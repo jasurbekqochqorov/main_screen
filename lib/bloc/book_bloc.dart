@@ -3,17 +3,17 @@ import 'dart:isolate';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:homework/bloc/book_event.dart';
-import 'package:homework/bloc/book_state.dart';
-import 'package:homework/data/model/book_model.dart';
-import 'package:homework/data/model/book_status_model.dart';
-import 'package:homework/data/model/category_model.dart';
-import 'package:homework/services/book_manager_services.dart';
 import 'package:open_filex/open_filex.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import '../data/local/local_variables.dart';
+import '../data/model/book_model.dart';
+import '../data/model/book_status_model.dart';
+import '../data/model/category_model.dart';
+import '../services/book_manager_services.dart';
+import 'book_event.dart';
+import 'book_state.dart';
 
 class BookBloc extends Bloc<BookEvent, BookState> {
   BookBloc()

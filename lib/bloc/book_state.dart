@@ -1,6 +1,7 @@
 
 import 'package:equatable/equatable.dart';
-import 'package:homework/data/model/book_model.dart';
+
+import '../data/model/book_model.dart';
 
 class BookState extends Equatable {
   const BookState({

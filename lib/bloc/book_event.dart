@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:homework/data/model/book_model.dart';
-import 'package:homework/data/model/category_model.dart';
+
+import '../data/model/book_model.dart';
+import '../data/model/category_model.dart';
 
 abstract class BookEvent extends Equatable {
   const BookEvent();

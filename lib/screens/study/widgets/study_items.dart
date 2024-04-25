@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:main_screen/utils/size_utils.dart';
 
+import '../../../utils/app_colors.dart';
 import '../../../utils/app_images.dart';
 
 class StudyItems extends StatelessWidget {

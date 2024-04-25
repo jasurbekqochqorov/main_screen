@@ -1,6 +1,6 @@
-import 'package:homework/data/model/book_model.dart';
 
 import '../../utils/app_images.dart';
+import '../model/book_model.dart';
 
 List<FileDataModel> files = [
   FileDataModel(
