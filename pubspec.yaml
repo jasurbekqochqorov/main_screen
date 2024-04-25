@@ -31,15 +31,20 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  flutter_screenutil: ^5.9.0
   flutter_svg: ^2.0.9
-  # http: ^1.2.0
-  shared_preferences: ^2.2.2
   flutter_bloc: ^8.1.5
   equatable: ^2.0.5
   open_filex: ^4.4.0
   dio: ^5.4.3+1
   path_provider: ^2.1.3
   permission_handler: ^11.3.1
+  device_info_plus: ^10.1.0
+  flutter_downloader: ^1.11.7
+  url_launcher: ^6.2.6
+  gallery_saver: ^2.3.2
+  screenshot: ^2.3.0
+  share_plus: ^9.0.0
 
 
 dev_dependencies:

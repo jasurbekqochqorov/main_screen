@@ -1,31 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:main_screen/screen/file_manager_screen.dart';
-import 'package:main_screen/services/file_maneger_service.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:main_screen/screens/tab_box.dart';
+import 'package:main_screen/services/book_manager_services.dart';
 
-import 'data/repositories/file_repository.dart';
+import 'bloc/book_bloc.dart';
 
-void main() {
+void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+  await FileManagerService.init();
 
-  FileManagerService();
-
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   Widget build(BuildContext context) {
-    return MultiRepositoryProvider(
+    return MultiBlocProvider(
       providers: [
-        RepositoryProvider(create: (_) => FileRepository()),
+        BlocProvider(create: (_) => BookBloc()),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(useMaterial3: false),
-        home: FileManagerScreen(),
+      child: ScreenUtilInit(
+        designSize: const Size(360, 800),
+        builder: (context, child) {
+          ScreenUtil.init(context);
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(useMaterial3: false),
+            home: child,
+          );
+        },
+        child: const TabBox1(),
       ),
     );
   }
